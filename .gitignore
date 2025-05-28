@@ -1,0 +1,35 @@
+dist/
+build/
+
+node_modules/
+
+# Package manager files
+package-lock.json
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# TypeScript specific ignores
+*.tsbuildinfo
+
+# IDE specific files
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Optional log files
+*.log
+
+# Temporary files
+*.tmp
+
+# Other
+*.swp
