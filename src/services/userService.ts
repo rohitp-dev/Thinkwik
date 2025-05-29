@@ -20,7 +20,8 @@ export async function createUserService(data: CreateUserDTO) {
       email: data.email,
       password: hashedPassword
     });
-    return user;
+    const { password, ...userWithoutPassword } = user.toObject();
+    return userWithoutPassword;
   } catch (error) {
     throw error;
   }
