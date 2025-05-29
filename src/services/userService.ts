@@ -57,3 +57,15 @@ export async function signInUserService(data: SignInDTO) {
     throw error;
   }
 }
+
+export async function getUserByUserId(userId: string) {
+  try {
+    const user = await User.findById(userId, '-password');
+    if (!user) {
+      throw new Error('User not found');
+    }
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}

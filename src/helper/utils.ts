@@ -1,3 +1,4 @@
 export const MODEL = {
-    USER: 'User'
+    USER: 'User',
+    TODO: 'Todo'
 }

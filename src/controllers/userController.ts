@@ -11,7 +11,7 @@ export async function createUser(req: Request, res: Response) {
       status: StatusCodes.CREATED
     });
   } catch (error: any) {
-    res.status(error.status || StatusCodes.BAD_REQUEST).json({ message: error.message || 'Something went wrong', status: error.status || StatusCodes.BAD_REQUEST });
+    res.status(error.status || StatusCodes.INTERNAL_SERVER_ERROR).json({ message: error.message || 'Something went wrong', status: error.status || StatusCodes.INTERNAL_SERVER_ERROR });
   }
 }
 
